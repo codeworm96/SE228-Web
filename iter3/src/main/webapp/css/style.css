@@ -1,0 +1,201 @@
+body {
+    padding-top: 70px;
+}
+.login-flex-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+}
+.account-container {
+    position: relative;
+    z-index: 1001;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px 40px 40px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+.account-container button {
+    width: 400px;
+    height: 48px;
+    border: none;
+    background-color: #323a45;
+    color: #fff;
+    font-size: 24px;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: opacity .2s ease;
+}
+.account-container button[disabled=true], .account-container button[disabled] {
+    opacity: .5!important;
+    cursor: not-allowed!important;
+}
+.account-container a {
+    color: rgba(0,0,0,.6);
+    transition: color .2s ease;
+}
+.account-container div.bottom-link {
+    margin-top: 15px;
+    text-align: center;
+}
+.account-container .account-input {
+    position: relative;
+    height: 68px;
+}
+.account-container .account-input input {
+    height: 48px;
+    width: 370px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid rgba(50, 58, 69, .2);
+    border-radius: 5px;
+}
+.account-container h2 {
+    margin: 0 0 25px;
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    color: #323a45;
+}
+
+.panel {
+    margin: auto;
+}
+
+.pie-chart {
+    width: 900px;
+    height: 500px;
+    position: relative;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+path.slice{
+    stroke-width:2px;
+}
+
+polyline{
+    opacity: .3;
+    stroke: black;
+    stroke-width: 2px;
+    fill: none;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.line {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+}
+
+.bar {
+    fill: steelblue;
+}
+
+.p-item {
+    list-style: none;
+    float: left;
+    width: 242px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.p-img {
+    width: 220px;
+    height: 220px;
+}
+
+.p-name {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.p-category {
+    display: block;
+    color: grey;
+}
+
+.p-price {
+    display: block;
+    font-size: 16px;
+    color: red;
+    font-weight: bold;
+}
+
+#detail-img {
+    display: inline-block;
+    width: 220px;
+    height: 220px;
+    margin: 10px;
+}
+
+.detail-section {
+    display: inline-block;
+}
+
+.cart-cover {
+    width: 80px;
+    height: 80px;
+}
+
+.cart-sum {
+    display: inline-block;
+    font-size: 20px;
+    margin: 7px;
+    font-weight: bold;
+}
+
+.cart-num {
+    width: 130px;
+}
+
+.table>tbody>tr>td.vmid {
+    vertical-align: middle;
+}
+
+.avatar-container {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+.avatar-small {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.avatar-big {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.upload-msg {
+    font-weight: bold;
+    color: red;
+}
+
+.panel-with-margin {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

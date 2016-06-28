@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - bookstore@localhost" uuid="3fcee1d1-9097-4846-92d3-82e3fba5d750">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="bookstore"/>
+      <table id="2" parent="1" name="book"/>
+      <table id="3" parent="1" name="order"/>
+      <table id="4" parent="1" name="order_item"/>
+      <table id="5" parent="1" name="user"/>
+      <column id="6" parent="2" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="7" parent="2" name="ISBN">
+        <data-type>varchar(32)</data-type>
+      </column>
+      <column id="8" parent="2" name="name">
+        <data-type>varchar(128)</data-type>
+      </column>
+      <column id="9" parent="2" name="price">
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="10" parent="2" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="11" parent="3" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="12" parent="3" name="username">
+        <data-type>varchar(32)</data-type>
+      </column>
+      <index id="13" parent="3" name="username">
+        <columns>username</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="14" parent="3" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="15" parent="3" name="order_ibfk_1">
+        <columns>username</columns>
+        <ref-key>~.user.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="16" parent="4" name="order_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="17" parent="4" name="book_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="18" parent="4" name="num">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="19" parent="4" name="book_id">
+        <columns>book_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="20" parent="4" name="order_id">
+        <columns>order_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <foreign-key id="21" parent="4" name="order_item_ibfk_1">
+        <columns>order_id</columns>
+        <ref-key>~.order.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="22" parent="4" name="order_item_ibfk_2">
+        <columns>book_id</columns>
+        <ref-key>~.book.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="23" parent="5" name="username">
+        <mandatory>1</mandatory>
+        <data-type>varchar(32)</data-type>
+      </column>
+      <column id="24" parent="5" name="password">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="25" parent="5" name="email">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="26" parent="5" name="is_admin">
+        <data-type>char(1)</data-type>
+      </column>
+      <key id="27" parent="5" name="PRIMARY">
+        <columns>username</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>

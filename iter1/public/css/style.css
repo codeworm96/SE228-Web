@@ -1,0 +1,15 @@
+.navbar-embossed {
+    background-color: #34495e;
+    border: 0;
+}
+.navbar-embossed a:hover {
+  color: #1abc9c!important;
+ }
+ 
+ .navbar-embossed a{
+     font-weight:bold!important;
+ }
+ 
+ .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+     background-color: #34495e;
+ }

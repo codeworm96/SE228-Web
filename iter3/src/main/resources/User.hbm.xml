@@ -1,0 +1,7 @@
+<hibernate-mapping package="bookstore.entity">
+    <class name="User" table="user">
+        <id name="username" />
+        <property name="password"/>
+        <property name="isAdmin" column="is_admin" />
+    </class>
+</hibernate-mapping>

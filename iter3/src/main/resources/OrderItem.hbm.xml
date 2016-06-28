@@ -1,0 +1,11 @@
+<hibernate-mapping package="bookstore.entity">
+    <class name="OrderItem" table="order_item">
+        <composite-id>
+            <key-property name="orderId" column="order_id"></key-property>
+            <key-property name="bookId" column="book_id"></key-property>
+        </composite-id>
+        <property name="num"/>
+        <property name="cents" column="price" />
+        <many-to-one name="book" column="book_id" insert="false" update="false" not-null="true"/>
+    </class>
+</hibernate-mapping>
